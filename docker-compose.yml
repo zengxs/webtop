@@ -1,0 +1,20 @@
+services:
+  webtop:
+    # Example image name. Replace 'zengxs/webtop' with your preferred image if needed.
+    image: zengxs/webtop
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: webtop
+    environment:
+      # Set the default locale, which affects text encoding, sorting rules,
+      # and other locale-specific behaviors. You can change it to your preferred locale.
+      LC_ALL: zh_CN.UTF-8
+      # The UID should match the host user ID to avoid permission issues
+      # when accessing mounted volumes, ensuring proper file ownership.
+      PUID: '501'
+      PGID: '501'
+    volumes:
+      - ./scripts:/scripts:ro
+      - ./opt:/opt
+      - ./workspace:/workspace
