@@ -27,7 +27,7 @@ echo "export ZDOTDIR=/workspace" >> $HOME/.zshenv
 echo "Configuring Go environment..."
 GOPATH=/workspace/.go
 echo "export GOPATH=$GOPATH" >> $HOME/.zshenv
-echo "export PATH=\$PATH:\$GOPATH/bin:/opt/miniforge3/envs/default/bin:/opt/miniforge3/bin" >> $HOME/.zshenv
+echo "export PATH=\$GOPATH/bin:/opt/miniforge3/envs/default/bin:/opt/miniforge3/bin:\$PATH" >> $HOME/.zshenv
 
 # Clean old zcompdump files (keep the latest one)
 echo "Cleaning old zcompdump files..."
