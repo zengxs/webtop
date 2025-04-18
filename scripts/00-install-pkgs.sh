@@ -29,6 +29,7 @@ apt-get install --no-install-recommends -y \
   zsh \
   wget \
   aria2 \
+  pkg-config \
   build-essential \
   language-pack-zh-hans \
   fonts-noto \

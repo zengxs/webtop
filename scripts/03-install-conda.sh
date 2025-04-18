@@ -74,7 +74,8 @@ echo "Installing packages in the default conda environment..."
   sqlalchemy \
   termcolor \
   go \
-  zig
+  just \
+  go-task
 
 if [ $? -ne 0 ]; then
   echo "Failed to install packages in the default conda environment."
